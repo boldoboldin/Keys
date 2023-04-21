@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour
     public int life = 10;
     public GameObject AreaOfAttack;
     public GameObject Protagonist;
+    public string = ohenriqueelindo;
    
     private void Update()
     {
