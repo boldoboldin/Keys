@@ -7,7 +7,6 @@ public class Enemy : MonoBehaviour
     public int life = 10;
     public GameObject AreaOfAttack;
     public GameObject Protagonist;
-    public string = ohenriqueelindo;
    
     private void Update()
     {
@@ -44,9 +43,9 @@ public class Enemy : MonoBehaviour
     private void FollowProtagonist()
     {
        float distance = Vector3.Distance(transform.position, Protagonist.transform.position);
-        if(distance < 3 && distance > 0.5f)
+        if(distance < 5 && distance > 1f)
         {
-            transform.position = Vector3.MoveTowards(transform.position, Protagonist.transform.position, 0.005f);
+            transform.position = Vector3.MoveTowards(transform.position, Protagonist.transform.position, 0.07f);
         }
     }
     
