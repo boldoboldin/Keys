@@ -10,8 +10,6 @@ public class EnemyAlt : MonoBehaviour
     private NavMeshAgent navMesh;
     private Rigidbody rb;
 
-    private bool awake = false;
-
     [SerializeField] private GameObject player;
 
     [SerializeField] private float atkDist; // Distancia para atk
@@ -64,12 +62,29 @@ public class EnemyAlt : MonoBehaviour
                 currentFollowDist = 0;
                 transform.LookAt(new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z));
             }
-
-            if (awake)
+            else
             {
-                FollowAgain();
-                //sfx.PlayOneShot(followSFX);
+                currentFollowDist = 5;
             }
+
+            if (player.transform.position.x < transform.position.x)
+            {
+                anim.SetBool("Front", true);
+            }
+            else if (player.transform.position.x > transform.position.x)
+            {
+                anim.SetBool("Front", false);
+            }
+
+            if (player.transform.position.z < transform.position.z)
+            {
+                sprite2D.transform.localScale = new Vector3(-4, 4, 4);
+            }
+            else if (player.transform.position.z > transform.position.z)
+            {
+                sprite2D.transform.localScale = new Vector3(4, 4, 4);
+            }
+
 
             anim.SetBool("Atk", atk); // Relaciona o valor da variavel "atk" com a animação "Atk"
             anim.SetBool("Walk", follow); // Relaciona o valor da variavel "follow" com a animação "Walk"
@@ -93,21 +108,9 @@ public class EnemyAlt : MonoBehaviour
         atkArea.SetActive(false);
     }
 
-    public void FollowAgain()
-    {
-        currentFollowDist = followDist * 5;
-        awake = false;
-    }
-
     public void ApplyDamage(int damage)
     {
         hp -= damage;
-
-        if (dist >= atkDist * 2)
-        {
-            awake = true;
-        }
-
 
         if (hp <= 0)
         {

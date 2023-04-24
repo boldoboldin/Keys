@@ -685,7 +685,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 181482922}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9e9909adca5f0294fbd5777ce92f72f2, type: 3}
   m_Name: 
@@ -706,7 +706,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 181482922}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d2c5e319eadd31c4ea17f2945aea9a3f, type: 3}
   m_Name: 
@@ -3959,7 +3959,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.14755444, y: 0.85243183, z: -0.35728678, w: 0.35204244}
+  m_LocalRotation: {x: 0.14755444, y: 0.85243183, z: -0.35728675, w: 0.35204244}
   m_LocalPosition: {x: -9.699999, y: 38.68, z: 19.609999}
   m_LocalScale: {x: 1.0000002, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
@@ -20170,7 +20170,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1756689174}
-  m_LocalRotation: {x: 0.14755444, y: 0.85243183, z: -0.35728678, w: 0.35204244}
+  m_LocalRotation: {x: 0.14755444, y: 0.85243183, z: -0.35728675, w: 0.35204244}
   m_LocalPosition: {x: -9.699999, y: 38.68, z: 19.609999}
   m_LocalScale: {x: 1.0000002, y: 1, z: 1.0000002}
   m_ConstrainProportionsScale: 0
@@ -20678,6 +20678,7 @@ GameObject:
   - component: {fileID: 1917943515}
   - component: {fileID: 1917943516}
   - component: {fileID: 1917943517}
+  - component: {fileID: 1917943518}
   m_Layer: 0
   m_Name: esqueleto_idle_0
   m_TagString: Untagged
@@ -20772,6 +20773,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &1917943518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1917943514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68470e79a50b24c4ca993cec511243db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  billboardType: 1
 --- !u!4 &1947512475 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d277c1abc9ea00f4e934cd3cf1ddaaa6, type: 3}
