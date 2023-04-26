@@ -10,6 +10,8 @@ public class PlayerCtrl : MonoBehaviour
 
     [SerializeField] private GameObject sprite2D;
     public Animator anim;
+    public GameObject MyAtk;
+    public string Side = "" ;
 
 
 
@@ -22,6 +24,7 @@ public class PlayerCtrl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Attack();
         if (Input.GetMouseButtonDown(0))
         {
             Move();
@@ -30,6 +33,7 @@ public class PlayerCtrl : MonoBehaviour
         if (agent.velocity.magnitude > 1)
         {
             anim.SetBool("Walk", true);
+            Side = "Back";
         }
         else
         {
@@ -39,6 +43,7 @@ public class PlayerCtrl : MonoBehaviour
         if (destination.x < transform.position.x)
         {
             anim.SetBool("Front", true);
+            Side = "Front";
         }
         else if (destination.x > transform.position.x)
         {
@@ -78,4 +83,31 @@ public class PlayerCtrl : MonoBehaviour
             }
         }
     }
+    private void Attack()
+    {
+        if(Side == "Back")
+        {
+            if(Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.X)) 
+            {
+                anim.SetTrigger("AtkBack");
+            }
+        }
+        if (Side == "Front")
+        {
+            if (Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.X))
+            {
+                anim.SetTrigger("AtkFront");
+            }
+        }
+    }
+
+    public void ActivateAtk()
+    {
+       MyAtk.SetActive(true);
+    }
+    public void DeactivateAtk()
+    {
+        MyAtk.SetActive(false);
+    }
+
 }
