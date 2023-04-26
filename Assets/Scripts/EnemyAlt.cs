@@ -86,8 +86,8 @@ public class EnemyAlt : MonoBehaviour
             }
 
 
-            anim.SetBool("Atk", atk); // Relaciona o valor da variavel "atk" com a animação "Atk"
-            anim.SetBool("Walk", follow); // Relaciona o valor da variavel "follow" com a animação "Walk"
+           anim.SetBool("Atk", atk); // Relaciona o valor da variavel "atk" com a animação "Atk"
+           anim.SetBool("Walk", follow); // Relaciona o valor da variavel "follow" com a animação "Walk"
 
         }
 
