@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18154567, g: 0.22718835, b: 0.307406, a: 1}
+  m_IndirectSpecularColor: {r: 0.18154567, g: 0.22718854, b: 0.30740544, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -16183,6 +16183,8 @@ MonoBehaviour:
   destination: {x: 0, y: 0, z: 0}
   sprite2D: {fileID: 1599646361}
   anim: {fileID: 1599646363}
+  MyAtk: {fileID: 0}
+  Side: 
 --- !u!195 &404375646
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -17116,7 +17118,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
-  m_StaticEditorFlags: 94
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!64 &616601448
 MeshCollider:
@@ -17399,7 +17401,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48b06c19f9c22fc499c164cb2138b88b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vel: 5
+  vel: 0.01
 --- !u!4 &617424678 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8b2f5a1753c136640b41ef153a112a26, type: 3}
@@ -17668,7 +17670,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-49678
+  m_Name: pb_Mesh97904
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -17723,9 +17725,9 @@ Mesh:
       format: 0
       dimension: 2
     - stream: 0
-      offset: 0
+      offset: 48
       format: 0
-      dimension: 0
+      dimension: 2
     - stream: 0
       offset: 0
       format: 0
@@ -17758,8 +17760,8 @@ Mesh:
       offset: 0
       format: 0
       dimension: 0
-    m_DataSize: 432
-    _typelessdata: 0000c8c200000000b4b764c0000000000000803f000000000000803f0000000000000000000080bf0000c8c2b4b764c00000c8c20000000000000000000000000000803f000000000000803f0000000000000000000080bf0000c8c2000000000000000000000000b4b764c0000000000000803f000000000000803f0000000000000000000080bf00000000b4b764c0000000000000000000000000000000000000803f000000000000803f0000000000000000000080bf00000000000000000000c8c200000000d9aa4a42000000000000803f000000000000803f0000000000000000000080bf0000c8c2d9aa4a420000000000000000d9aa4a42000000000000803f000000000000803f0000000000000000000080bf00000000d9aa4a420000c84200000000b4b764c0000000000000803f000000000000803f0000000000000000000080bf0000c842b4b764c00000c8420000000000000000000000000000803f000000000000803f0000000000000000000080bf0000c842000000000000c84200000000d9aa4a42000000000000803f000000000000803f0000000000000000000080bf0000c842d9aa4a42
+    m_DataSize: 504
+    _typelessdata: 0000c8c200000000b4b764c0000000000000803f000000000000803f0000000000000000000080bf0000c8c2b4b764c019467b3f0bd7a33c0000c8c20000000000000000000000000000803f000000000000803f0000000000000000000080bf0000c8c20000000019467b3f6e4b183d0000000000000000b4b764c0000000000000803f000000000000803f0000000000000000000080bf00000000b4b764c06832003f0ed7a33c000000000000000000000000000000000000803f000000000000803f0000000000000000000080bf00000000000000006932003f6e4b183d0000c8c200000000d9aa4a42000000000000803f000000000000803f0000000000000000000080bf0000c8c2d9aa4a421b467b3f4ec18f3e0000000000000000d9aa4a42000000000000803f000000000000803f0000000000000000000080bf00000000d9aa4a426a32003f4ec18f3e0000c84200000000b4b764c0000000000000803f000000000000803f0000000000000000000080bf0000c842b4b764c00bd7a33c0bd7a33c0000c8420000000000000000000000000000803f000000000000803f0000000000000000000080bf0000c842000000000fd7a33c6e4b183d0000c84200000000d9aa4a42000000000000803f000000000000803f0000000000000000000080bf0000c842d9aa4a423cd7a33c4ec18f3e
   m_CompressedMesh:
     m_Vertices:
       m_NumItems: 0
@@ -17819,7 +17821,7 @@ Mesh:
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
   m_MeshMetrics[0]: 1
-  m_MeshMetrics[1]: 1
+  m_MeshMetrics[1]: 43264.05
   m_MeshOptimizationFlags: 1
   m_StreamData:
     serializedVersion: 2
@@ -22182,7 +22184,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh102786
+  m_Name: pb_Mesh97752
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -22724,7 +22726,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh103332
+  m_Name: pb_Mesh98298
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -23189,7 +23191,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: -45, y: -45, z: 0}
 --- !u!95 &1599646363
 Animator:
-  serializedVersion: 5
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -23206,7 +23208,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &1599646364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23220,6 +23222,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   billboardType: 1
+  playerCtrl: {fileID: 0}
 --- !u!212 &1599646365
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -42518,7 +42521,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1627484056}
-  m_LocalRotation: {x: 0.14755443, y: 0.85243183, z: -0.35728675, w: 0.35204244}
+  m_LocalRotation: {x: 0.14755443, y: 0.85243183, z: -0.35728678, w: 0.35204244}
   m_LocalPosition: {x: -8.099999, y: 35.2, z: 98.26}
   m_LocalScale: {x: 1.0000002, y: 1, z: 1.0000002}
   m_ConstrainProportionsScale: 0
@@ -42965,7 +42968,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh103346
+  m_Name: pb_Mesh98312
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -43754,7 +43757,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh92264
+  m_Name: pb_Mesh98522
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -46203,7 +46206,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2127117500}
-  m_LocalRotation: {x: 0.14755443, y: 0.85243183, z: -0.35728675, w: 0.35204244}
+  m_LocalRotation: {x: 0.14755443, y: 0.85243183, z: -0.35728678, w: 0.35204244}
   m_LocalPosition: {x: -8.099999, y: 35.2, z: 98.26}
   m_LocalScale: {x: 1.0000002, y: 1, z: 0}
   m_ConstrainProportionsScale: 0

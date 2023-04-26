@@ -19,13 +19,13 @@ public class TimeCtrl : MonoBehaviour
     {
         if (isFuture)
         {
-            futureTemple.SetActive(false);
-            pastTemple.SetActive(true);
+            futureTemple.SetActive(true);
+            pastTemple.SetActive(false);
         }
         else
         {
-            futureTemple.SetActive(true);
-            pastTemple.SetActive(false);
+            futureTemple.SetActive(false);
+            pastTemple.SetActive(true);
         }
 
         if (Input.GetKeyDown(KeyCode.E) && isFuture)

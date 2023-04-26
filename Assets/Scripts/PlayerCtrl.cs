@@ -25,6 +25,7 @@ public class PlayerCtrl : MonoBehaviour
     void Update()
     {
         Attack();
+
         if (Input.GetMouseButtonDown(0))
         {
             Move();
@@ -33,7 +34,7 @@ public class PlayerCtrl : MonoBehaviour
         if (agent.velocity.magnitude > 1)
         {
             anim.SetBool("Walk", true);
-            Side = "Back";
+            
         }
         else
         {
@@ -48,6 +49,7 @@ public class PlayerCtrl : MonoBehaviour
         else if (destination.x > transform.position.x)
         {
             anim.SetBool("Front", false);
+            Side = "Back";
         }
 
         if (destination.z < transform.position.z)
@@ -68,12 +70,21 @@ public class PlayerCtrl : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, Mathf.Infinity))
         {
-            if (hit.collider.gameObject.tag == "Inimigo")
+            if (hit.collider.gameObject.tag == "Enemy")
             {
-                agent.stoppingDistance = 2;
+                agent.stoppingDistance = 1;
                 agent.SetDestination(hit.point);
                 destination = hit.point;
 
+                    //if (Side == "Front")
+                    //{
+                    //    anim.SetTrigger("AtkFront");
+                    //}
+
+                    //if (Side == "Back")
+                    //{
+                    //    anim.SetTrigger("AtkBack");
+                    //}
             }
             else
             {
@@ -90,6 +101,7 @@ public class PlayerCtrl : MonoBehaviour
             if(Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.X)) 
             {
                 anim.SetTrigger("AtkBack");
+
             }
         }
         if (Side == "Front")
@@ -103,11 +115,11 @@ public class PlayerCtrl : MonoBehaviour
 
     public void ActivateAtk()
     {
-       MyAtk.SetActive(true);
+        MyAtk.SetActive(true);
+
     }
     public void DeactivateAtk()
     {
         MyAtk.SetActive(false);
     }
-
 }

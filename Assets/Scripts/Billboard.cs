@@ -8,7 +8,9 @@ public class Billboard : MonoBehaviour
 
     public enum BillboardType {LookAtCamera, CameraForward};
 
-    // Update is called once per frame
+    [SerializeField] private PlayerCtrl playerCtrl;
+    
+    
     void LateUpdate()
     {
         switch (billboardType)
@@ -22,5 +24,14 @@ public class Billboard : MonoBehaviour
         default:
             break;
         }
+    }
+    public void ActivateAtk()
+    {
+        playerCtrl.ActivateAtk();
+
+    }
+    public void DeactivateAtk()
+    {
+        playerCtrl.DeactivateAtk();
     }
 }

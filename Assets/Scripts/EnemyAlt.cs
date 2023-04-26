@@ -86,7 +86,7 @@ public class EnemyAlt : MonoBehaviour
             }
 
 
-           anim.SetBool("Atk", atk); // Relaciona o valor da variavel "atk" com a animação "Atk"
+           //anim.SetBool("Atk", atk); // Relaciona o valor da variavel "atk" com a animação "Atk"
            anim.SetBool("Walk", follow); // Relaciona o valor da variavel "follow" com a animação "Walk"
 
         }
@@ -114,17 +114,27 @@ public class EnemyAlt : MonoBehaviour
 
         if (hp <= 0)
         {
-            navMesh.enabled = false;
-            anim.SetBool("Atk", false);
-            anim.SetBool("Walk", false);
-            anim.SetTrigger("Die");
-            GetComponent<Collider>().enabled = false;
-            Destroy(gameObject, 2.5f);
+            //navMesh.enabled = false;
+            //anim.SetBool("Atk", false);
+            //anim.SetBool("Walk", false);
+            //anim.SetTrigger("Die");
+            //GetComponent<Collider>().enabled = false;
+            //Destroy(gameObject, 2.5f);
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
+        if (other.gameObject.tag == "Attack")
+        {
+            navMesh.enabled = false;
+            anim.SetBool("Atk", false);
+            anim.SetBool("Walk", false);
+            anim.SetTrigger("Die");
+            GetComponent<Collider>().enabled = false;
+            Destroy(gameObject, 1f);
+        }
+
         if (other.gameObject.tag == "Player")
         {
             //playerHP.ApplyDamage(damage);
