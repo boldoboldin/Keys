@@ -13,12 +13,14 @@ public class PlayerCtrl : MonoBehaviour
     public GameObject MyAtk;
     public string Side = "" ;
 
+    public int hp;
+
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        hp = 10;
     }
 
     // Update is called once per frame
@@ -121,5 +123,12 @@ public class PlayerCtrl : MonoBehaviour
     public void DeactivateAtk()
     {
         MyAtk.SetActive(false);
+    }
+
+    public void ApplyDamage(int damage)
+    {
+        hp = hp - damage;
+
+
     }
 }

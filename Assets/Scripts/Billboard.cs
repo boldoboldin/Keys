@@ -9,8 +9,9 @@ public class Billboard : MonoBehaviour
     public enum BillboardType {LookAtCamera, CameraForward};
 
     [SerializeField] private PlayerCtrl playerCtrl;
-    
-    
+    [SerializeField] private EnemyAlt enemyCtrl;
+
+
     void LateUpdate()
     {
         switch (billboardType)
@@ -33,5 +34,15 @@ public class Billboard : MonoBehaviour
     public void DeactivateAtk()
     {
         playerCtrl.DeactivateAtk();
+    }
+
+    public void EnemyActivateAtk()
+    {
+        enemyCtrl.ActivateAtk();
+
+    }
+    public void EnemyDeactivateAtk()
+    {
+        enemyCtrl.DeactivateAtk();
     }
 }

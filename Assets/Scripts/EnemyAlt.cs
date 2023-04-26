@@ -11,6 +11,7 @@ public class EnemyAlt : MonoBehaviour
     private Rigidbody rb;
 
     [SerializeField] private GameObject player;
+    [SerializeField] private PlayerCtrl playerCtrl;
 
     [SerializeField] private float atkDist; // Distancia para atk
     [SerializeField] private float followDist; // Distancia para perceguir
@@ -86,7 +87,7 @@ public class EnemyAlt : MonoBehaviour
             }
 
 
-           //anim.SetBool("Atk", atk); // Relaciona o valor da variavel "atk" com a animação "Atk"
+           anim.SetBool("Atk", atk); // Relaciona o valor da variavel "atk" com a animação "Atk"
            anim.SetBool("Walk", follow); // Relaciona o valor da variavel "follow" com a animação "Walk"
 
         }
@@ -97,15 +98,16 @@ public class EnemyAlt : MonoBehaviour
         }
     }
 
-    public void DoAtk()
+    public void ActivateAtk()
     {
         atkArea.SetActive(true);
         //sfx.PlayOneShot(atkSFX);
     }
 
-    public void UndoAtk()
+    public void DeactivateAtk()
     {
         atkArea.SetActive(false);
+        
     }
 
     public void ApplyDamage(int damage)
@@ -137,7 +139,7 @@ public class EnemyAlt : MonoBehaviour
 
         if (other.gameObject.tag == "Player")
         {
-            //playerHP.ApplyDamage(damage);
+           playerCtrl.ApplyDamage(1);
         }
     }
 }

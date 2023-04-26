@@ -15,6 +15,6 @@ public class WaterMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(transform.position.x - vel, transform.position.y, transform.position.z);
+        transform.position = new Vector3(transform.position.x - vel * Time.deltaTime, transform.position.y, transform.position.z);
     }
 }
