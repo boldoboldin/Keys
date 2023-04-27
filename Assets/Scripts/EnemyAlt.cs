@@ -20,8 +20,6 @@ public class EnemyAlt : MonoBehaviour
     [SerializeField] private GameObject atkArea;
     public float currentFollowDist;
     private float dist;
-    public float count;
-
 
     private AudioSource sfx;
     //[SerializeField] private AudioClip atkSFX;
@@ -34,6 +32,8 @@ public class EnemyAlt : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        StartCoroutine(ExampleCoroutine());
+
         sfx = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody>();
         navMesh = GetComponent<NavMeshAgent>();
@@ -44,18 +44,6 @@ public class EnemyAlt : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Attack
-        count = count + 1 * Time.deltaTime;
-        if (count < 2)
-        {
-            ActivateAtk();
-        }
-        else 
-        {
-            DeactivateAtk();
-        }
-
-
         if (navMesh.enabled) // Se navMesh estive ativo
         {
             bool atk = false;
@@ -113,12 +101,23 @@ public class EnemyAlt : MonoBehaviour
             currentFollowDist = currentFollowDist - Time.deltaTime * 7;
         }
     }
+    IEnumerator ExampleCoroutine()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(5);
+            ActivateAtk();
+            yield return new WaitForSeconds(5);
+            DeactivateAtk();
+        }
+
+    }
+
 
    public void ActivateAtk()
     {
         atkArea.SetActive(true);
         //sfx.PlayOneShot(atkSFX);
-
     }
     public void DeactivateAtk()
     {
@@ -150,11 +149,6 @@ public class EnemyAlt : MonoBehaviour
             anim.SetTrigger("Die");
             GetComponent<Collider>().enabled = false;
             Destroy(gameObject, 1f);
-        }
-
-        if (other.gameObject.tag == "Player")
-        {
-           playerCtrl.ApplyDamage(1);
         }
         
     }

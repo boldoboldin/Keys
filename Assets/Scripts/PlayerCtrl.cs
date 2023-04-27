@@ -125,10 +125,9 @@ public class PlayerCtrl : MonoBehaviour
         MyAtk.SetActive(false);
     }
 
-    public void ApplyDamage(int damage)
+    public void ApplyDamage()
     {
-        hp = hp - damage;
-
-
+        hp--;
     }
+
 }
