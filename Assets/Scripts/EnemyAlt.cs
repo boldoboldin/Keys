@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -11,6 +12,7 @@ public class EnemyAlt : MonoBehaviour
     private Rigidbody rb;
 
     [SerializeField] private GameObject player;
+
     [SerializeField] private PlayerCtrl playerCtrl;
 
     [SerializeField] private float atkDist; // Distancia para atk
@@ -18,6 +20,8 @@ public class EnemyAlt : MonoBehaviour
     [SerializeField] private GameObject atkArea;
     public float currentFollowDist;
     private float dist;
+    public float count;
+
 
     private AudioSource sfx;
     //[SerializeField] private AudioClip atkSFX;
@@ -40,6 +44,18 @@ public class EnemyAlt : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Attack
+        count = count + 1 * Time.deltaTime;
+        if (count < 2)
+        {
+            ActivateAtk();
+        }
+        else 
+        {
+            DeactivateAtk();
+        }
+
+
         if (navMesh.enabled) // Se navMesh estive ativo
         {
             bool atk = false;
@@ -98,16 +114,15 @@ public class EnemyAlt : MonoBehaviour
         }
     }
 
-    public void ActivateAtk()
+   public void ActivateAtk()
     {
         atkArea.SetActive(true);
         //sfx.PlayOneShot(atkSFX);
-    }
 
+    }
     public void DeactivateAtk()
     {
         atkArea.SetActive(false);
-        
     }
 
     public void ApplyDamage(int damage)
@@ -141,5 +156,8 @@ public class EnemyAlt : MonoBehaviour
         {
            playerCtrl.ApplyDamage(1);
         }
+        
     }
+
+
 }
