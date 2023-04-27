@@ -1690,7 +1690,6 @@ MonoBehaviour:
   followDist: 5
   atkArea: {fileID: 1508165071}
   currentFollowDist: 0
-  count: 0
   damage: 1
   hp: 5
 --- !u!114 &181482931
@@ -4535,10 +4534,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   billboardType: 1
   playerCtrl: {fileID: 787010610}
-  enemyCtrl: {fileID: 0}
 --- !u!95 &442161919
 Animator:
-  serializedVersion: 5
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -4555,7 +4553,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &444840831 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e757634b6caa4174ea2b83ee4560b8de, type: 3}
@@ -48609,7 +48607,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &1508165072
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -48630,7 +48628,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1508165071}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -54305,7 +54303,7 @@ SpriteRenderer:
   m_SpriteSortPoint: 0
 --- !u!95 &1917943517
 Animator:
-  serializedVersion: 5
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -54322,7 +54320,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &1917943518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54337,7 +54335,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   billboardType: 1
   playerCtrl: {fileID: 0}
-  enemyCtrl: {fileID: 0}
 --- !u!1 &1921575149 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e757634b6caa4174ea2b83ee4560b8de, type: 3}
