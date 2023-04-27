@@ -150,11 +150,6 @@ public class EnemyAlt : MonoBehaviour
             GetComponent<Collider>().enabled = false;
             Destroy(gameObject, 1f);
         }
-
-        if (other.gameObject.tag == "Player")
-        {
-           playerCtrl.ApplyDamage(1);
-        }
         
     }
 
