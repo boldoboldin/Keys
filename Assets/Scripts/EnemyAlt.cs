@@ -152,6 +152,9 @@ public class EnemyAlt : MonoBehaviour
         }
         
     }
-
+    public void RecoverHp()
+    {
+        hp++;
+    }
 
 }

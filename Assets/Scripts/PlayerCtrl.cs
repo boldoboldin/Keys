@@ -14,6 +14,7 @@ public class PlayerCtrl : MonoBehaviour
     public string Side = "" ;
 
     public int hp;
+    public int maxHp = 10;
 
 
 
