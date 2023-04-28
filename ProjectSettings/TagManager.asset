@@ -7,6 +7,9 @@ TagManager:
   - Attack
   - MyAtk
   - Enemy
+  - CooperDoor
+  - SilverDoor
+  - GoldDoor
   layers:
   - Default
   - TransparentFX

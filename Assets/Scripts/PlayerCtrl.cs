@@ -130,4 +130,28 @@ public class PlayerCtrl : MonoBehaviour
         hp--;
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "CooperDoor" && KeyGeren.cooperKey > 0)
+        {
+            KeyGeren.cooperKey--;
+
+            Destroy(other.gameObject);
+        }
+
+        if (other.gameObject.tag == "SilverDoor" && KeyGeren.silverKey > 0)
+        {
+            KeyGeren.silverKey--;
+
+            Destroy(other.gameObject);
+        }
+
+        if (other.gameObject.tag == "GoldDoor" && KeyGeren.goldKey > 0)
+        {
+            KeyGeren.goldKey--;
+
+            Destroy(other.gameObject);
+        }
+    }
+
 }
