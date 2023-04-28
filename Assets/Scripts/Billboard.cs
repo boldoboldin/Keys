@@ -10,6 +10,7 @@ public class Billboard : MonoBehaviour
 
     [SerializeField] private PlayerCtrl playerCtrl;
     [SerializeField] private EnemyAlt enemyCtrl;
+    [SerializeField] private Boss boss;
 
 
     void LateUpdate()
@@ -44,5 +45,10 @@ public class Billboard : MonoBehaviour
     public void EnemyDeactivateAtk()
     {
         enemyCtrl.DeactivateAtk();
+    }
+
+    public void BossActivateAtk()
+    {
+        boss.Shoot();
     }
 }

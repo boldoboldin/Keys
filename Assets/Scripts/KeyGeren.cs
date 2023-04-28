@@ -6,9 +6,9 @@ using UnityEngine.AI;
 public class KeyGeren : MonoBehaviour
 {
     [SerializeField] private string keyType;
-    public static int cooperKey;
-    public static int silverKey;
-    public static int goldKey;
+    public static int cooperKey = 0;
+    public static int silverKey = 0;
+    public static int goldKey = 0;
 
     // Start is called before the first frame update
     void Start()

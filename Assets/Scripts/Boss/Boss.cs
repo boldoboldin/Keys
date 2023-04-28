@@ -7,10 +7,11 @@ public class Boss : MonoBehaviour
 {
     public GameObject Arrow;
     public GameObject ExitPoint;
+    public Animator anim;
 
     // Update is called once per frame
     void Update()
-    {
+    {   
         StartCoroutine(Attack());
     }
 
@@ -18,12 +19,12 @@ public class Boss : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(2);
-            Shoot();
+           yield return new WaitForSeconds(2);
+           anim.SetTrigger("Atk");
 
         }
     }
-    private void Shoot()
+   public void Shoot()
     {
         GameObject Dispair = Instantiate(Arrow, ExitPoint.transform.position, Quaternion.identity);
         Dispair.GetComponent<Rigidbody>().AddForce(transform.forward);

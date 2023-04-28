@@ -133,21 +133,21 @@ public class PlayerCtrl : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "CooperDoor" && KeyGeren.cooperKey > 0)
+        if (other.gameObject.tag == "CooperDoor" && KeyGeren.cooperKey != 0)
         {
             KeyGeren.cooperKey--;
 
             Destroy(other.gameObject);
         }
 
-        if (other.gameObject.tag == "SilverDoor" && KeyGeren.silverKey > 0)
+        if (other.gameObject.tag == "SilverDoor" && KeyGeren.silverKey != 0)
         {
             KeyGeren.silverKey--;
 
             Destroy(other.gameObject);
         }
 
-        if (other.gameObject.tag == "GoldDoor" && KeyGeren.goldKey > 0)
+        if (other.gameObject.tag == "GoldDoor" && KeyGeren.goldKey != 0)
         {
             KeyGeren.goldKey--;
 
@@ -158,7 +158,7 @@ public class PlayerCtrl : MonoBehaviour
             hp++;
             Destroy(other.gameObject);
         }
-        else
+        else if (other.gameObject.tag == "Recover" && hp == 10)
         {
             Destroy(other.gameObject);
         }

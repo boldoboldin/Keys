@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18245867, g: 0.22817005, b: 0.30725884, a: 1}
+  m_IndirectSpecularColor: {r: 0.18245889, g: 0.22817048, b: 0.30725956, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -355,6 +355,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Arrow: {fileID: 1419553726390744617, guid: f247eb41adbb8664f93b3907414caf54, type: 3}
   ExitPoint: {fileID: 714058018}
+  anim: {fileID: 1917943517}
 --- !u!114 &181482931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1402,7 +1403,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25546
+  m_Name: pb_Mesh43060
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1566,7 +1567,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh26862
+  m_Name: pb_Mesh43258
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2929,6 +2930,7 @@ MonoBehaviour:
   billboardType: 1
   playerCtrl: {fileID: 0}
   enemyCtrl: {fileID: 0}
+  boss: {fileID: 181482930}
 --- !u!850595691 &1952864897
 LightingSettings:
   m_ObjectHideFlags: 0

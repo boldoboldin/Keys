@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1419553726390744615}
   - component: {fileID: 1419553726390744613}
   - component: {fileID: 8255804877699737161}
+  - component: {fileID: 2624769097568106527}
   m_Layer: 0
   m_Name: Arrow
   m_TagString: Untagged
@@ -29,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 1419553726390744617}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0.86}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -48,7 +49,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pScript: {fileID: 738844360927607897, guid: 008d9f9f5af971245a180c3977ed2de1, type: 3}
-  player: {fileID: 2110277559962575193, guid: 7821500e8326e204ca591ade31bf6607, type: 3}
 --- !u!65 &1419553726390744615
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -119,7 +119,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1865251553, guid: f44543ccedd80f84fa9fa37e6ceae77d, type: 3}
+  m_Sprite: {fileID: 932308087, guid: 2f1d460c0f510c249a2accd266a143cb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -130,3 +130,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2624769097568106527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1419553726390744617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68470e79a50b24c4ca993cec511243db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  billboardType: 1
+  playerCtrl: {fileID: 0}
+  enemyCtrl: {fileID: 0}
+  boss: {fileID: 0}

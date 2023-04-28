@@ -91,7 +91,7 @@ public class EnemyAlt : MonoBehaviour
             }
 
 
-           anim.SetBool("Atk", atk); // Relaciona o valor da variavel "atk" com a animação "Atk"
+           //anim.SetBool("Atk", atk); // Relaciona o valor da variavel "atk" com a animação "Atk"
            anim.SetBool("Walk", follow); // Relaciona o valor da variavel "follow" com a animação "Walk"
 
         }
@@ -144,7 +144,7 @@ public class EnemyAlt : MonoBehaviour
         if (other.gameObject.tag == "Attack")
         {
             navMesh.enabled = false;
-            anim.SetBool("Atk", false);
+            //anim.SetBool("Atk", false);
             anim.SetBool("Walk", false);
             anim.SetTrigger("Die");
             GetComponent<Collider>().enabled = false;
