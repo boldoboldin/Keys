@@ -33,4 +33,13 @@ public class SceneManagement : MonoBehaviour
         SceneManager.LoadScene(fSave);
     }
 
+    public void WinPhase()
+    {
+        SceneManager.LoadScene(YouWin);
+    }
+
+    public void LostPhase()
+    {
+        SceneManager.LoadScene(YouDie);
+    }
 }

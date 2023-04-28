@@ -117,7 +117,6 @@ public class EnemyAlt : MonoBehaviour
    public void ActivateAtk()
     {
         atkArea.SetActive(true);
-        //sfx.PlayOneShot(atkSFX);
     }
     public void DeactivateAtk()
     {
@@ -151,10 +150,6 @@ public class EnemyAlt : MonoBehaviour
             Destroy(gameObject, 1f);
         }
         
-    }
-    public void RecoverHp()
-    {
-        hp++;
     }
 
 }
