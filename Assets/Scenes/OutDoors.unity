@@ -107,7 +107,7 @@ NavMeshSettings:
     serializedVersion: 2
     agentTypeID: 0
     agentRadius: 0.74
-    agentHeight: 2
+    agentHeight: 2.58
     agentSlope: 45
     agentClimb: 0.4
     ledgeDropHeight: 0
@@ -72264,7 +72264,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bca735c257b1fc643ac31abac92291d9, type: 2}
+  - {fileID: 2100000, guid: c1a28fe2ae0578941b1a3814f498f96a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

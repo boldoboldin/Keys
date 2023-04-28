@@ -35,11 +35,11 @@ public class SceneManagement : MonoBehaviour
 
     public void WinPhase()
     {
-        SceneManager.LoadScene(YouWin);
+        //SceneManager.LoadScene(YouWin);
     }
 
     public void LostPhase()
     {
-        SceneManager.LoadScene(YouDie);
+        //SceneManager.LoadScene(YouDie);
     }
 }

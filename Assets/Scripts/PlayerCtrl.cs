@@ -13,6 +13,8 @@ public class PlayerCtrl : MonoBehaviour
     public GameObject MyAtk;
     public string Side = "" ;
 
+    public SceneManagement SM;
+
     public int hp;
     public int maxHp = 10;
 
@@ -154,9 +156,7 @@ public class PlayerCtrl : MonoBehaviour
 
         if (other.gameObject.tag == "GoldDoor" && KeyGeren.goldKey != 0)
         {
-            KeyGeren.goldKey--;
-
-            Destroy(other.gameObject);
+            SM.PassPhase();
         }
         if(other.gameObject.tag == "Recover" && hp <= 10)
         {
