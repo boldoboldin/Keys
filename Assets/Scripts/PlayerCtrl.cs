@@ -152,6 +152,15 @@ public class PlayerCtrl : MonoBehaviour
 
             Destroy(other.gameObject);
         }
+        if(other.gameObject.tag == "Recover" && hp <= 10)
+        {
+            hp++;
+            Destroy(other.gameObject);
+        }
+        else
+        {
+            Destroy(other.gameObject);
+        }
     }
 
 }

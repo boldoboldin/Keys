@@ -10,6 +10,7 @@ TagManager:
   - CooperDoor
   - SilverDoor
   - GoldDoor
+  - Recover
   layers:
   - Default
   - TransparentFX
