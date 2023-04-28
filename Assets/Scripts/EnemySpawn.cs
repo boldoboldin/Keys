@@ -11,7 +11,6 @@ public class EnemySpawn : MonoBehaviour
     public float SpawnDistance = 10;
     private float quantity;
     private bool realizeSpawn;
-    // Start is called before the first frame update
     void Start()
     {
         realizeSpawn = false;
