@@ -10,7 +10,7 @@ public class EnemyAtkArea : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
-            playerCtrl.ApplyDamage();
+            playerCtrl.ApplyDamage(1);
         }
     }
 }

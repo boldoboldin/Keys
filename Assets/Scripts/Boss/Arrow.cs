@@ -16,7 +16,7 @@ public class Arrow : MonoBehaviour
     {
         if(other.gameObject.tag == "Player") 
         {
-            pScript.ApplyDamage();
+            pScript.ApplyDamage(2);
         }
     }
 }

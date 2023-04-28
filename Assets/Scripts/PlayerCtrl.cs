@@ -16,12 +16,13 @@ public class PlayerCtrl : MonoBehaviour
     public int hp;
     public int maxHp = 10;
 
-
+    public bool killBoss = false;   
+    public SceneManagement sceneManagement;
 
     // Start is called before the first frame update
     void Start()
     {
-        hp = 10;
+        hp = maxHp;
     }
 
     // Update is called once per frame
@@ -126,9 +127,13 @@ public class PlayerCtrl : MonoBehaviour
         MyAtk.SetActive(false);
     }
 
-    public void ApplyDamage()
+    public void ApplyDamage(int damage)
     {
         hp--;
+        if(hp <= 0)
+        {
+            youDie();
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -164,4 +169,16 @@ public class PlayerCtrl : MonoBehaviour
         }
     }
 
+    public void Win()
+    {
+        if(killBoss == true)
+        {
+            sceneManagement.WinPhase();
+        }
+    }
+
+    public void youDie()
+    {
+        sceneManagement.LostPhase();
+    }
 }
