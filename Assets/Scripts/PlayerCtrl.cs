@@ -14,6 +14,7 @@ public class PlayerCtrl : MonoBehaviour
     public string Side = "" ;
 
     public int hp;
+    public int maxHp = 10;
 
 
 
@@ -150,6 +151,15 @@ public class PlayerCtrl : MonoBehaviour
         {
             KeyGeren.goldKey--;
 
+            Destroy(other.gameObject);
+        }
+        if(other.gameObject.tag == "Recover" && hp <= 10)
+        {
+            hp++;
+            Destroy(other.gameObject);
+        }
+        else
+        {
             Destroy(other.gameObject);
         }
     }
