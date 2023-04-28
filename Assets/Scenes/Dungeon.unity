@@ -11849,7 +11849,7 @@ GameObject:
   - component: {fileID: 844338165}
   - component: {fileID: 844338164}
   m_Layer: 5
-  m_Name: CooperKeyIcon (1)
+  m_Name: IronKeyIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29615,7 +29615,7 @@ GameObject:
   - component: {fileID: 1155366793}
   - component: {fileID: 1155366792}
   m_Layer: 5
-  m_Name: CooperKeyIcon
+  m_Name: GoldenKeyIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -51032,7 +51032,7 @@ GameObject:
   - component: {fileID: 1626477420}
   - component: {fileID: 1626477419}
   m_Layer: 5
-  m_Name: CooperKeyIcon (3)
+  m_Name: PotionIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -53162,7 +53162,7 @@ GameObject:
   - component: {fileID: 1785942889}
   - component: {fileID: 1785942888}
   m_Layer: 5
-  m_Name: CooperKeyIcon (2)
+  m_Name: CooperKeyIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -98322,7 +98322,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh82884
+  m_Name: pb_Mesh41094
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

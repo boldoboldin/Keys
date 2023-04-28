@@ -2263,7 +2263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBarImage: {fileID: 2003687185}
-  playerCtrl: {fileID: 0}
+  playerCtrl: {fileID: 787010610}
 --- !u!114 &883975362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2582,7 +2582,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBarImage: {fileID: 2003687185}
-  playerCtrl: {fileID: 0}
+  playerCtrl: {fileID: 787010610}
 --- !u!1 &1417745958
 GameObject:
   m_ObjectHideFlags: 0

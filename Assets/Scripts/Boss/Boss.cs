@@ -36,7 +36,7 @@ public class Boss : MonoBehaviour
    
    public void Shoot()
     {
-        GameObject Dispair = Instantiate(Arrow, ExitPoint.transform.position, Quaternion.identity);
+        GameObject Dispair = Instantiate(Arrow, ExitPoint.transform.position, transform.rotation);
         Dispair.GetComponent<Rigidbody>().AddForce(transform.forward);
         Destroy(Dispair, 5f);
         StopAllCoroutines();
