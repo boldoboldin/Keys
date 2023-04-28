@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class PlayerCtrl : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class PlayerCtrl : MonoBehaviour
 
     public int hp;
     public int maxHp = 10;
+
+    public Image hpBar;
 
     public bool killBoss = false;   
     public SceneManagement sceneManagement;
@@ -132,6 +135,10 @@ public class PlayerCtrl : MonoBehaviour
     public void ApplyDamage(int damage)
     {
         hp--;
+
+        int hpBarSize = hp * 20 + 25;
+        hpBar.rectTransform.sizeDelta = new Vector2(hpBarSize, 130);
+
         if(hp <= 0)
         {
             youDie();

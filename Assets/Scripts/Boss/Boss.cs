@@ -9,7 +9,7 @@ public class Boss : MonoBehaviour
     public GameObject Arrow;
     public GameObject ExitPoint;
     public Animator anim;
-    private int bossHp = 10;
+    private int bossHp = 15;
     public PlayerCtrl playerCtrl;  
 
     // Update is ca1lled once per frame
@@ -31,8 +31,6 @@ public class Boss : MonoBehaviour
         {
             yield return new WaitForSeconds(2);
             anim.SetTrigger("Atk");
-            
-
         }
     }
    
@@ -48,6 +46,7 @@ public class Boss : MonoBehaviour
     {
         if(bossHp == 0)
         {
+            Destroy(this.gameObject);
             playerCtrl.killBoss = true;
         }
     }

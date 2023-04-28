@@ -124,7 +124,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 738844360927607878}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.2, y: 0.9, z: -20.5}
+  m_LocalPosition: {x: 10.16, y: 0.9, z: 12.37}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -255,7 +255,12 @@ MonoBehaviour:
   anim: {fileID: 738844361136140948}
   MyAtk: {fileID: 738844361772057632}
   Side: 
+  SM: {fileID: 0}
   hp: 0
+  maxHp: 10
+  hpBar: {fileID: 0}
+  killBoss: 0
+  sceneManagement: {fileID: 0}
 --- !u!1 &738844361136140944
 GameObject:
   m_ObjectHideFlags: 0
@@ -357,6 +362,7 @@ MonoBehaviour:
   billboardType: 1
   playerCtrl: {fileID: 738844360927607897}
   enemyCtrl: {fileID: 0}
+  boss: {fileID: 0}
 --- !u!95 &738844361136140948
 Animator:
   serializedVersion: 5
