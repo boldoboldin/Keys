@@ -15,6 +15,13 @@ public class SceneManagement : MonoBehaviour
             PlayerPrefs.SetInt("FASE", ActualPhase);
         }
     }
+    public void Update()
+    {
+          if(Input.GetKeyDown(KeyCode.U)) 
+        {
+            WinPhase();
+        }
+    }
 
     public void Phase (int numberPhase)
     {

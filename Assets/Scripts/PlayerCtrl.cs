@@ -22,7 +22,6 @@ public class PlayerCtrl : MonoBehaviour
     public Image hpBar;
 
     public bool killBoss = false;   
-    public SceneManagement sceneManagement;
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +32,7 @@ public class PlayerCtrl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Win();
         Attack();
 
         if (Input.GetMouseButtonDown(0))
@@ -180,12 +180,12 @@ public class PlayerCtrl : MonoBehaviour
     {
         if(killBoss == true)
         {
-            sceneManagement.WinPhase();
+            SM.WinPhase();
         }
     }
 
     public void youDie()
     {
-        sceneManagement.LostPhase();
+        SM.LostPhase();
     }
 }
